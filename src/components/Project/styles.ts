@@ -261,6 +261,8 @@ export const Container = styled.section`
         font-size: 0.95rem;
       }
 
+      
+
       footer .tech-list {
         font-size: 0.9rem;
         gap: 0.4rem;
