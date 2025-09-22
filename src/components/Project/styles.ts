@@ -83,14 +83,59 @@ export const Container = styled.section`
   }
 
   @media (max-width: 960px){
-    .projects{
+    .projects {
       grid-template-columns: 1fr 1fr;
+      gap: 1.5rem; /* réduit le gap */
+      padding: 0.8rem;
+    }
+    
+      .project {
+      padding: 1.5rem 1rem; /* réduit padding */
+      header {
+        margin-bottom: 2.5rem;
+      }
+
+      h3 {
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        margin-bottom: 1.5rem;
+      }
+
+      footer .tech-list {
+        gap: 1.2rem;
+        font-size: 1.3rem;
+      }
     }
   }
 
   @media (max-width: 740px){
-    .projects{
+     .projects {
       grid-template-columns: 1fr;
+      gap: 1rem; /* réduit encore le gap */
+      padding: 0.5rem; /* moins de padding */
     }
+
+    .project {
+      padding: 1rem; /* padding plus petit */
+      header {
+        margin-bottom: 2rem;
+      }
+
+      h3 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      footer .tech-list {
+        gap: 1rem;
+        font-size: 1.1rem;
+      }
   }
-`
+`;
