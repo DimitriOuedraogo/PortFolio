@@ -31,7 +31,7 @@ export function Form() {
   if (state.succeeded) {
     return (
       <ContainerSucces>
-        <h3>Thanks for getting in touch!</h3>
+        <h3>Contactez-nous via le formulaire</h3>
         <button
           onClick={() => {
             window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -45,7 +45,7 @@ export function Form() {
   }
   return (
     <Container>
-      <h2>Get in touch using the form</h2>
+      <h2>Contactez-nous via le formulaire</h2>
       <form onSubmit={handleSubmit}>
         <input
           placeholder="Email"

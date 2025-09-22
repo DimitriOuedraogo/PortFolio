@@ -7,7 +7,6 @@ import { Project } from "../Project/Project";
 import python from "../../assets/python.svg"
 import java from "../../assets/java.svg"
 import wordpress from "../../assets/wordpress.svg";
-import shopify from "../../assets/shopify.svg";
 import htmlIcon from "../../assets/html-icon.svg";
 import cssIcon from "../../assets/css-icon.svg";
 import sassIcon from "../../assets/sass-icon.svg";
@@ -17,6 +16,13 @@ import reactIcon from "../../assets/react-icon.svg";
 import typescriptIcon from "../../assets/typescript-icon.svg";
 import vueIcon from "../../assets/vue-icon.svg";
 import boostrapIcon from "../../assets/bootstrap-icon.svg";
+import django from "../../assets/django-svgrepo-com.svg";
+import springBoot from "../../assets/spring-boot-icon.svg";
+import angular from "../../assets/angular-icon.svg";
+import dart from "../../assets/dart-icon.svg";
+import flutter from "../../assets/flutter-icon.svg";
+import figma from "../../assets/figma-icon.svg";
+import next from "../../assets/nextjs-light.svg";
 
 export function Main() {
   return (
@@ -155,6 +161,21 @@ export function Main() {
                   "width": 20,
                   "height": 20
                 },
+                 {
+                  "src": dart,
+                  "width": 20,
+                  "height": 20
+                },
+                 {
+                  "src": flutter,
+                  "width": 20,
+                  "height": 20
+                },
+                 {
+                  "src": next,
+                  "width": 20,
+                  "height": 20
+                },
                 {
                   "src": cssIcon,
                   "width": 20,
@@ -166,7 +187,7 @@ export function Main() {
                   "height": 20
                 },
                 {
-                  "src": shopify,
+                  "src": springBoot,
                   "width": 20,
                   "height": 20
                 },
@@ -180,11 +201,21 @@ export function Main() {
                   "width": 20,
                   "height": 20
                 },
-                // {
-                //   "src": mysqlIcon,
-                //   "width": 20,
-                //   "height": 20
-                // },
+                {
+                  "src": django,
+                  "width": 20,
+                  "height": 20
+                },
+                 {
+                  "src": angular,
+                  "width": 20,
+                  "height": 20
+                },
+                 {
+                  "src": figma,
+                  "width": 20,
+                  "height": 20
+                },
                 {
                   "src": python,
                   "width": 20,
@@ -215,11 +246,6 @@ export function Main() {
                 //   "width": 20,
                 //   "height": 20
                 // },
-                {
-                  "src": vueIcon,
-                  "width": 20,
-                  "height": 20
-                },
 
               ],
               "polygon": {

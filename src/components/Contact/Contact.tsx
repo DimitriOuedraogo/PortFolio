@@ -1,27 +1,28 @@
-import { Container } from "./styles";
 import emailIcon from "../../assets/email-icon.svg";
-import phoneIcon from "../../assets/phone-icon.svg"
+import phoneIcon from "../../assets/phone-icon.svg";
 import { Form } from "../Form/Form";
+import { Container } from "./styles";
 
 
-export function Contact(){
+export function Contact() {
 
-  return(
+  return (
     <Container id="contact">
       <header>
-        <h2>Contact</h2>
-        <p>Ready to get started on your project? </p>
-        <p>Contact me now for a Free consultation.</p>
+        <h2>Contactez-moi</h2>
+        <p>Vous avez besoin d'un développeur ?</p>
+        <p>Contactez-moi ! Je suis disponible pour transformer vos idées en applications fonctionnelles.</p>
+
       </header>
       <div className="contacts">
-        <div>
-        <a href="mailto:vinayak@vinayaksingh.com"><img src={emailIcon} alt="Email" /></a> 
-          <a href="mailto:vinayak@vinayaksingh.com">vinayak@vinayaksingh.com</a>
+        <div className="contact-email">
+          <a href="mailto:dimitriouedraogo9539@gmail.com"><img src={emailIcon} alt="Email" /></a>
+          <a href="mailto:dimitriouedraogo9539@gmail.com">dimitriouedraogo9539@gmail.com</a>
         </div>
         <div>
-        <a href="tel:+919630576848"><img src={phoneIcon} alt="Phone No" /></a>
-          <a href="tel:+919630576848">(+91) 9630576848</a>
-        </div>  
+          <a href="tel:+22677454757"><img src={phoneIcon} alt="Phone No" /></a>
+          <a href="tel:+22677454757">(+226) 77454757</a>
+        </div>
       </div>
       <Form></Form>
     </Container>

@@ -63,6 +63,10 @@ export const Container = styled.section`
           }
         }
       }
+      
+      .visit-site {
+        width : 30px;
+      }
 
       footer{
         margin-top: auto;

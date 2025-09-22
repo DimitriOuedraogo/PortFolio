@@ -7,7 +7,7 @@ export const Container = styled.section`
   gap: 2rem;
 
   .hard-skills{
-    margin-top: 1.6rem;
+    margin-top:10px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -36,42 +36,61 @@ export const Container = styled.section`
     margin-top: 2rem;
     color: var(--green);
   }
+  
+  h4{
+    margin-top : 1rem;
+    font-weight: bold
+    }
 
   p{
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
     font-weight: 500;
   }
-  
-  
+.about-image {
+  text-align: center;
 
-  .about-image{
-    text-align: center;
-   img{
-     margin-top: 2rem;
-     width: 75%;
-     filter: grayscale(0);
-     transition: filter 0.5s;
-     &:hover{
-       filter: grayscale(0);
-     }
-   }
-  }
+  img {
+    margin-top: 2rem;
+    width: 75%;
+    border-radius: 15px;          /* coins arrondis */
+    border: 3px solid #ccc;       /* bordure grise élégante */
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* ombre douce */
+    filter: grayscale(0);
+    transition: filter 0.5s, transform 0.3s, box-shadow 0.3s;
 
-  @media only screen and (max-width: 480px) {
-    .about-image {
-      max-width: 100%;
-      margin-top: 4rem;
-      img{
-        margin-top: 2rem;
-        width: 100%;
-        filter: grayscale(0);
-        transition: filter 0.5s;
-        &:hover{
-          filter: grayscale(0);
-        }
+    &:hover {
+      filter: grayscale(0);
+      transform: scale(1.03);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); /* ombre plus forte au hover */
     }
   }
+}
+
+@media only screen and (max-width: 480px) {
+  .about-image {
+    max-width: 100%;
+    margin-top: 4rem;
+
+    img {
+      margin-top: 2rem;
+      width: 100%;
+      border-radius: 12px;
+      border: 2px solid #ccc;
+      object-fit: cover;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* ombre adaptée mobile */
+      filter: grayscale(0);
+      transition: filter 0.5s, transform 0.3s, box-shadow 0.3s;
+
+      &:hover {
+        filter: grayscale(0);
+        transform: scale(1.03);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}
 
   @media (max-width: 960px){
     display: block;
