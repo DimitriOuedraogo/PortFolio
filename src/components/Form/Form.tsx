@@ -1,91 +1,88 @@
-import { Container, ContainerSucces } from './styles'
-import { useForm, ValidationError } from '@formspree/react'
-import { toast, ToastContainer } from 'react-toastify'
-import ReCAPTCHA from 'react-google-recaptcha'
-import { useEffect, useState } from 'react'
-import validator from 'validator'
+import { useForm, ValidationError } from '@formspree/react';
+import { useEffect, useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
+import { toast, ToastContainer } from 'react-toastify';
+import validator from 'validator';
+import { Container, ContainerSucces } from './styles';
 
 export function Form() {
-  const [state, handleSubmit] = useForm('xknkpqry')
-  const [validEmail, setValidEmail] = useState(false)
-  const [isHuman, setIsHuman] = useState(false)
-  const [message, setMessage] = useState('')
+
+  const [state, handleSubmit] = useForm("xjkababv");
+  const [validEmail, setValidEmail] = useState(false);
+  const [isHuman, setIsHuman] = useState(false);
+  const [message, setMessage] = useState('');
+
+
   function verifyEmail(email: string) {
-    if (validator.isEmail(email)) {
-      setValidEmail(true)
-    } else {
-      setValidEmail(false)
-    }
+    setValidEmail(validator.isEmail(email));
   }
+
+  // Notification de succès
   useEffect(() => {
     if (state.succeeded) {
-      toast.success('Email successfully sent!', {
+      toast.success('Email envoyé avec succès !', {
         position: toast.POSITION.BOTTOM_LEFT,
         pauseOnFocusLoss: false,
         closeOnClick: true,
         hideProgressBar: false,
         toastId: 'succeeded',
-      })
+      });
     }
-  })
+  }, [state.succeeded]);
+
   if (state.succeeded) {
     return (
       <ContainerSucces>
-        <h3>Contactez-nous via le formulaire</h3>
+        <h3>Merci ! Votre message a bien été envoyé.</h3>
         <button
           onClick={() => {
-            window.scrollTo({ top: 0, behavior: 'smooth' })
+            window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
-          Back to the top
+            Retour en haut
         </button>
         <ToastContainer />
       </ContainerSucces>
-    )
+    );
   }
+
   return (
     <Container>
       <h2>Contactez-nous via le formulaire</h2>
       <form onSubmit={handleSubmit}>
         <input
-          placeholder="Email"
+          placeholder="Votre email"
           id="email"
           type="email"
           name="email"
-          onChange={(e) => {
-            verifyEmail(e.target.value)
-          }}
+          onChange={(e) => verifyEmail(e.target.value)}
           required
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
+
         <textarea
           required
-          placeholder="Send a message to get started."
+          placeholder="Écrivez votre message ici..."
           id="message"
           name="message"
-          onChange={(e) => {
-            setMessage(e.target.value)
-          }}
+          onChange={(e) => setMessage(e.target.value)}
         />
-        <ValidationError
-          prefix="Message"
-          field="message"
-          errors={state.errors}
-        />
+        <ValidationError prefix="Message" field="message" errors={state.errors} />
+
+        {/* reCAPTCHA v2 */}
         <ReCAPTCHA
-          sitekey="6Lfj9NYfAAAAAP8wPLtzrsSZeACIcGgwuEIRvbSg"
-          onChange={(e) => {
-            setIsHuman(true)
-          }}
-        ></ReCAPTCHA>
+          sitekey="6LeHb9ErAAAAAC2K2tPhsRW0sW4uR6tco4XjIarz"
+          onChange={(token) => setIsHuman(!!token)}
+        />
+
         <button
           type="submit"
           disabled={state.submitting || !validEmail || !message || !isHuman}
         >
-          Submit
+          Envoyer
         </button>
       </form>
       <ToastContainer />
     </Container>
-  )
+  );
 }

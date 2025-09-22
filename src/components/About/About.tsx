@@ -50,20 +50,21 @@ export function About() {
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInLeft" delay={550}>
           <div className="experience">
-            <h3>Experience:</h3><h4>Développeur Full stack</h4>
+            <h3>Experience:</h3>
+            <h4>Développeur Full stack</h4>
             <p>Heka Concept | 3 Mois</p>
             <p>THE BID SARL | 3 Mois </p>
           </div>
           <h4>Développeur Mobile Indépendant</h4>
-            <p>Boulangerie Wendso | 2 Mois</p>
+          <p>Boulangerie Wendinso | 3 Mois</p>
         </ScrollAnimation>
 
         <ScrollAnimation animateIn="fadeInLeft" delay={0.4 * 1000}>
           <h3>Voici Mes Compétences :</h3>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInLeft"  delay={0.5 * 1000} >
+        <ScrollAnimation animateIn="fadeInLeft" delay={0.5 * 1000} >
           <h4>Langages :</h4>
-        </ScrollAnimation>       
+        </ScrollAnimation>
         <div className="hard-skills">
           <div className="hability">
             <ScrollAnimation animateIn="fadeInUp" delay={0.10 * 1000}>
@@ -75,7 +76,7 @@ export function About() {
               <img src={java} alt="java" />
             </ScrollAnimation>
           </div>
-           <div className="hability">
+          <div className="hability">
             <ScrollAnimation animateIn="fadeInUp" delay={0.11 * 1000}>
               <img src={dart} alt="Dart" />
             </ScrollAnimation>
@@ -84,12 +85,12 @@ export function About() {
             <ScrollAnimation animateIn="fadeInUp" delay={0.12 * 1000}>
               <img src={jsIcon} alt="JavaScript" />
             </ScrollAnimation>
-          </div>  
+          </div>
           <div className="hability">
             <ScrollAnimation animateIn="fadeInUp" delay={0.14 * 1000}>
               <img src={typescriptIcon} alt="Typescript" />
             </ScrollAnimation>
-          </div>      
+          </div>
           <div className="hability">
             <ScrollAnimation animateIn="fadeInUp" delay={0.18 * 1000}>
               <img src={htmlIcon} alt="Html" />
@@ -101,11 +102,11 @@ export function About() {
             </ScrollAnimation>
           </div>
         </div>
-       <ScrollAnimation animateIn="fadeInLeft" >
+        <ScrollAnimation animateIn="fadeInLeft" >
           <h4>Frameworks Web :</h4>
         </ScrollAnimation>
-        <div className="hard-skills">      
-           <div className="hability">
+        <div className="hard-skills">
+          <div className="hability">
             <ScrollAnimation animateIn="fadeInUp" delay={0.13 * 1000}>
               <img src={django} alt="Django" />
             </ScrollAnimation>
@@ -130,38 +131,38 @@ export function About() {
               <img src={angular} alt="Angular" />
             </ScrollAnimation>
           </div>
-         
+
           <div className="hability">
             <ScrollAnimation animateIn="fadeInUp" delay={0.20 * 1000}>
               <img src={boostrapIcon} alt="bootstrap" />
             </ScrollAnimation>
           </div>
         </div>
-       <ScrollAnimation animateIn="fadeInLeft" >
+        <ScrollAnimation animateIn="fadeInLeft" >
           <h4>Mobile :</h4>
         </ScrollAnimation>
-          <div className="hard-skills">        
+        <div className="hard-skills">
           <div className="hability">
             <ScrollAnimation animateIn="fadeInUp" >
               <img src={flutter} alt="Flutter" />
             </ScrollAnimation>
           </div>
         </div>
-         <ScrollAnimation animateIn="fadeInLeft" >
+        <ScrollAnimation animateIn="fadeInLeft" >
           <h4>Autre Outils :</h4>
         </ScrollAnimation>
-         <div className="hard-skills">        
+        <div className="hard-skills">
           <div className="hability">
             <ScrollAnimation animateIn="fadeInUp" >
               <img src={wordpress} alt="WordPress" />
             </ScrollAnimation>
           </div>
-           <div className="hability">
+          <div className="hability">
             <ScrollAnimation animateIn="fadeInUp" >
               <img src={figma} alt="Figma" />
             </ScrollAnimation>
           </div>
-          
+
         </div>
       </div>
       <div className="about-image">
